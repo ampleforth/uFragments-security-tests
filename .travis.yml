@@ -1,0 +1,17 @@
+dist: trusty
+sudo: required
+
+services:
+  - docker
+
+before_install:
+  - npm install -g npx
+
+script:
+  - docker build -t fragments-test .
+  - docker run -it fragments-test /bin/sh -c "./test.sh"
+
+notifications:
+  email:
+    - eng@fragments.org
+  slack: fragmentsorg:2bN0L0FCZZ0illBRyPucRZkV
