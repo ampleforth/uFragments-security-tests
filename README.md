@@ -1,4 +1,8 @@
-# μFragments Test Scripts
+# μFragments security tests
+
+<img src="https://frgs3.s3.amazonaws.com/logo_centered_small.jpg" alt="Banner" width="100" />
+
+[![Build Status](https://travis-ci.com/frgprotocol/uFragments-security-tests.svg?token=xxNsLhLrTiyG3pc78i5v&branch=master)](https://travis-ci.com/frgprotocol/uFragments-security-tests)
 
 [Manticore](https://github.com/trailofbits/manticore) and [Echidna](https://github.com/trailofbits/echidna) scripts for testing μFragments.
 
