@@ -1,6 +1,6 @@
 # μFragments security tests
 
-[![Build Status](https://travis-ci.com/frgprotocol/uFragments-security-tests.svg?token=xxNsLhLrTiyG3pc78i5v&branch=master)](https://travis-ci.com/frgprotocol/uFragments-security-tests)
+[![Build Status](https://travis-ci.com/ampleforth/uFragments-security-tests.svg?token=xxNsLhLrTiyG3pc78i5v&branch=master)](https://travis-ci.com/ampleforth/uFragments-security-tests)
 
 [Manticore](https://github.com/trailofbits/manticore) and [Echidna](https://github.com/trailofbits/echidna) scripts for testing μFragments.
 
@@ -30,3 +30,5 @@ fragments@895f6f8a5476:~/manticore$ python3 add_and_remove_source.py
 This script formally validates that there is no way for the whitelist to be corrupted.
 
 There is also a script `gons_invariant.py` that can be run similarly that validates the invariant that `_gonsPerFragment` always equals `TOTAL_GONS.div(_totalSupply)`. An incompatibility in Manticore 0.2.2 means that this script will fail due to an out of gas error, however, this will hopefully be fixed in the forthcoming release of Manticore.
+
+Original code version supplied by [Trail of Bits](https://www.trailofbits.com/).
