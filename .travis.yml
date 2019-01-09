@@ -13,5 +13,5 @@ script:
 
 notifications:
   email:
-    - eng@fragments.org
+    - dev-support@ampleforth.org
   slack: fragmentsorg:2bN0L0FCZZ0illBRyPucRZkV
