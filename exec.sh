@@ -10,6 +10,6 @@ cd echidna
 cd ../
 
 # Running manticore test script
-# cd manticore
-# python3 add_and_remove_source.py
+cd manticore
+python3 add_and_remove_source.py
 # python3 gons_invariant.py // Note this script fails
