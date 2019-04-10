@@ -1,17 +1,14 @@
 dist: trusty
 sudo: required
-
 services:
-  - docker
-
+- docker
 before_install:
-  - npm install -g npx
-
+- pip install --user awscli
+- npm install -g npx
+- export PATH=$PATH:$HOME/.local/bin
 script:
-  - docker build -t fragments-test .
-  - docker run -it fragments-test /bin/sh -c "./test.sh"
-
+- make run
 notifications:
   email:
-    - dev-support@ampleforth.org
+  - dev-support@ampleforth.org
   slack: fragmentsorg:2bN0L0FCZZ0illBRyPucRZkV

@@ -42,6 +42,7 @@ USER fragments
 WORKDIR /home/fragments/dependencies
 RUN git clone https://github.com/trailofbits/echidna.git
 WORKDIR /home/fragments/dependencies/echidna
+RUN git reset --hard d93c226b2ad4ff884f33faa850d7d36556c12211 # Using stable version
 RUN stack upgrade
 RUN stack setup
 RUN stack install
@@ -61,7 +62,7 @@ USER fragments
 
 COPY echidna /home/fragments/echidna/
 COPY manticore /home/fragments/manticore/
-COPY test.sh /home/fragments/test.sh
+COPY exec.sh /home/fragments/exec.sh
 
 USER root
 
