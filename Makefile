@@ -18,7 +18,7 @@ build:
 tag:
 	@docker tag $(DOCKER_REPO):$(DOCKER_TAG) $(AWS_ECR_DOMAIN)/$(DOCKER_REPO):$(DOCKER_TAG)
 	@docker tag $(DOCKER_REPO):$(DOCKER_TAG) $(AWS_ECR_DOMAIN)/$(DOCKER_REPO):$(DOCKER_TAG_LATEST)
-	
+
 push: ecr-login tag
 	@docker push $(AWS_ECR_DOMAIN)/$(DOCKER_REPO):$(DOCKER_TAG)
 	@docker push $(AWS_ECR_DOMAIN)/$(DOCKER_REPO):$(DOCKER_TAG_LATEST)
@@ -26,5 +26,5 @@ push: ecr-login tag
 pull: ecr-login
 	@docker pull $(AWS_ECR_DOMAIN)/$(DOCKER_REPO):$(DOCKER_TAG_LATEST)
 
-exec: pull
+run: pull
 	@docker run -it $(AWS_ECR_DOMAIN)/$(DOCKER_REPO):$(DOCKER_TAG_LATEST) /bin/sh -c "./exec.sh"

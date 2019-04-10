@@ -7,7 +7,7 @@ before_install:
 - npm install -g npx
 - export PATH=$PATH:$HOME/.local/bin
 script:
-- make exec
+- make run
 notifications:
   email:
   - dev-support@ampleforth.org
